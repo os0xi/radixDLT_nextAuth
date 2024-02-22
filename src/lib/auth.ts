@@ -59,12 +59,10 @@ export const authOptions: NextAuthOptions = {
         accounts: { label: 'Accounts', type: 'text' },
       },
       authorize: async (credentials) => {
-        // Assuming verification has been done prior with ROLA
         console.log('in nextauth authorize')
         console.log('acccounts ', credentials?.accounts)
         if (!credentials) return null
 
-        // Parse the `proofs` JSON string to an array
         const proofs = JSON.parse(credentials.proofs) ?? []
         const accounts = JSON.parse(credentials.accounts) ?? []
         const isValid = await verifyProofs(proofs)

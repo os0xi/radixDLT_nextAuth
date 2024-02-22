@@ -48,7 +48,6 @@ export default function RadixDappToolkitProvider({
           redirect: false, // Prevent NextAuth.js from redirecting
           ...credentials, // Pass the proofs as credentials
         })
-
         // Check the result of the signIn attempt
         if (!result?.ok) {
           throw new Error('Invalid proof')
