@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export async function verifyProofs(proofs: any) {
   try {
     // Assuming your verification endpoint expects a JSON payload with the proofs
-    const response = await fetch('http://localhost:3000/api/verify', {
+    const response = await fetch('/api/verify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
