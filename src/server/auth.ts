@@ -3,8 +3,6 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { db } from './db'
 import { verifyProofs } from '@/lib/utils'
 
-
-
 export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
@@ -19,6 +17,7 @@ export const authOptions: NextAuthOptions = {
       authorize: async (credentials) => {
         console.log('in nextauth authorize')
         console.log('acccounts ', credentials?.accounts)
+        console.log('proofs ', credentials?.proofs)
         if (!credentials) return null
 
         const proofs = JSON.parse(credentials.proofs) ?? []
@@ -74,4 +73,4 @@ export const authOptions: NextAuthOptions = {
   },
 }
 
-export const getServerAuthSession = () => getServerSession(authOptions);
+export const getServerAuthSession = () => getServerSession(authOptions)

@@ -8,14 +8,17 @@ export function cn(...inputs: ClassValue[]) {
 export async function verifyProofs(proofs: any) {
   try {
     // Assuming your verification endpoint expects a JSON payload with the proofs
-    const response = await fetch('/api/verify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // Include any additional headers your endpoint requires
-      },
-      body: JSON.stringify({ proofs }),
-    })
+    const response = await fetch(
+      'https://radix-dlt-next-auth-4o8k.vercel.app/api/verify',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Include any additional headers your endpoint requires
+        },
+        body: JSON.stringify({ proofs }),
+      }
+    )
 
     if (!response.ok) {
       // Handle HTTP error responses

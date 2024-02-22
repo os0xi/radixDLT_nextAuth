@@ -39,13 +39,7 @@ export const Header = ({ className = '' }: { className?: string }) => {
         <Link href="/account">Account</Link>
       </div>
       <div className="">
-        <div className="">
-          {user ? (
-            <Button onClick={() => dappToolkit.disconnect()}>Log Out</Button>
-          ) : (
-            <radix-connect-button ref={ref} />
-          )}
-        </div>
+        <radix-connect-button ref={ref} />
       </div>
     </header>
   )
