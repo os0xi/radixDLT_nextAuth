@@ -1,0 +1,69 @@
+{
+  "name": "gumball-club",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": " npx prettier --cache --write src"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radixdlt/dapps-dropdown": "^0.2.1",
+    "@radixdlt/radix-dapp-toolkit": "^1.4.3",
+    "@radixdlt/rola": "^1.0.3",
+    "@radixdlt/wallet-sdk": "^1.0.1",
+    "@react-spring/web": "^9.7.3",
+    "@tanstack/react-query": "^5.22.2",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.19",
+    "@types/react-dom": "18.2.7",
+    "bignumber.js": "^9.1.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.13",
+    "lucide-react": "^0.335.0",
+    "next": "13.5.1",
+    "next-auth": "^4.24.6",
+    "next-themes": "^0.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.32.6",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "file-loader": "^6.2.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "url-loader": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RDXWorks/gumball_club.git"
+  },
+  "authors": [
+    "inspired by Alex Stelea <alex.stelea@rdx.works>",
+    "and <dawid.sowa@rdx.works>"
+  ],
+  "keywords": [
+    "radix",
+    "dapp",
+    "toolkit",
+    "dlt",
+    "web3",
+    "dApp",
+    "crypto",
+    "DeFi"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
