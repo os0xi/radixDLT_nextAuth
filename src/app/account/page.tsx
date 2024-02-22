@@ -1,14 +1,18 @@
-'use client'
-import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { getServerAuthSession } from "@/server/auth"
 
-type Props = {}
+async function page() {
 
-function page() {
-  const session = useSession()
-  const router = useRouter()
-  if (!session.data?.user) router.push('/')
-  return <div>{session.data?.user?.id}</div>
+  const session = await getServerAuthSession()
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false, // Temporary redirect
+      },
+      props: {}, // No props needed
+    };
+  }
+  return <div>Hello account {session.user.id}</div>
 }
 
 export default page

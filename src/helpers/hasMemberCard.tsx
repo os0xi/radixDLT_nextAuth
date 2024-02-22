@@ -1,4 +1,4 @@
-import { config } from '../app/config'
+import { config } from '../config'
 import { AccountWithTokens } from '../hooks/useAccounts'
 import { NonFungibleResource } from '../transformers/addTokens'
 

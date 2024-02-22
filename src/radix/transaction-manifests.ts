@@ -1,4 +1,4 @@
-import { ResourceAddresses } from '../app/config'
+import { ResourceAddresses } from '../config'
 import { AccountWithMemberCard } from '../helpers/hasMemberCard'
 
 export const TransactionManifests = ({

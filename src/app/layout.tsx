@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
         <meta
           property="og:title"
@@ -36,8 +36,8 @@ export default function RootLayout({
       </Head>
 
       <body className={font.className}>
-        <RadixDappProvider>
-          <AuthSessionProvider>
+        <AuthSessionProvider>
+          <RadixDappProvider>
             <RadixAuthSessionProvider>
               <ReactQueryProvider>
                 <ThemeProvider
@@ -51,8 +51,8 @@ export default function RootLayout({
                 </ThemeProvider>
               </ReactQueryProvider>
             </RadixAuthSessionProvider>
-          </AuthSessionProvider>
-        </RadixDappProvider>
+          </RadixDappProvider>
+        </AuthSessionProvider>
       </body>
     </html>
   )

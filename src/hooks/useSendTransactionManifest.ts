@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { TransactionManifests } from '../radix/transaction-manifests'
-import { config } from '../app/config'
+import { config } from '../config'
 import { useSendTransaction } from './useSendTransaction'
 import { NonFungibleResource } from '../transformers/addTokens'
 import { useGetCommittedDetails } from './useGetCommittedDetails'

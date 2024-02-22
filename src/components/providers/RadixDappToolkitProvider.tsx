@@ -2,7 +2,7 @@
 import { signIn, useSession } from 'next-auth/react'
 import { WalletSdk } from '@radixdlt/wallet-sdk'
 import { Result } from 'neverthrow'
-import { config } from '@/app/config'
+import { config } from '@/config'
 import { RadixProvider } from '@/radix/RadixProvider'
 import {
   DataRequestBuilder,
